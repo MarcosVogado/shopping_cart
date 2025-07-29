@@ -12,13 +12,35 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
 
+const addDataToHTML = () => {
+    listProductHTML.innerHTML = ''
+    if(listProducts.length > 0) {
+        listProducts.forEach(product => {
+            let newProduct = document.createElement('div')
+            newProduct.classList.add('item')
+            newProduct.innerHTML = `
+                <img src="${product.image}" alt="">
+                <h2>${product.name}</h2>
+                <div class="price">$${product.price}</div>
+                <button class="addCart">
+                    Add To Cart
+                </button>
+            `
+            listProductHTML.appendChild(newProduct)
+        })
+    }
+}
+/*listProductHTML.addEventListener('click', (event) => {
+    let positionClick = event.target
+})*/
+
 const initApp = () => {
     //get data from json
     fetch('products.json')
     .then(Response => Response.json())
     .then(data => {
         listProducts = data
-        console.log(listProducts)
+        addDataToHTML()
     })
 }
 initApp();
