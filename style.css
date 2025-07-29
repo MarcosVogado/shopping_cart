@@ -22,6 +22,9 @@ header {
     justify-content: space-between;
     padding: 20px 0;
 }
+header .title {
+    font-weight: 500;
+}
 header .icon-cart {
     position: relative;
 }

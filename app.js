@@ -30,9 +30,12 @@ const addDataToHTML = () => {
         })
     }
 }
-/*listProductHTML.addEventListener('click', (event) => {
+listProductHTML.addEventListener('click', (event) => {
     let positionClick = event.target
-})*/
+    if(positionClick.classList.contains('addCart')){
+        alert('1')
+    }
+})
 
 const initApp = () => {
     //get data from json
