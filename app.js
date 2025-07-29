@@ -11,3 +11,14 @@ iconCart.addEventListener('click', () => {
 closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart')
 })
+
+const initApp = () => {
+    //get data from json
+    fetch('products.json')
+    .then(Response => Response.json())
+    .then(data => {
+        listProducts = data
+        console.log(listProducts)
+    })
+}
+initApp();
