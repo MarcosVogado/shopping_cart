@@ -10,6 +10,7 @@ body {
     margin: auto;
     text-align: center;
     padding-top: 10px;
+    transition: trasnform .5s;
 }
 svg {
     width: 40px;
@@ -74,9 +75,16 @@ header .icon-cart span {
     background-color: #353535;
     color: white;
     position: fixed;
-    inset: 0 0 0 auto;
+    inset: 0 -400px 0 auto;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+body.showCart .container {
+    transform: translateX(-250px);
 }
 .cartTab h1 {
     padding: 20px;
@@ -86,4 +94,46 @@ header .icon-cart span {
 .cartTab .btn {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button {
+    background-color: #e8bc0e;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btn .close {
+    background-color: white;
+}
+.cartTab .ListCart .item img {
+    width: 100%;
+}
+.cartTab .ListCart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.ListCart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.ListCart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: white;
+}
+.ListCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+.ListCart {
+    overflow: auto;
+}
+.ListCart::-webkit-scrollbar {
+    width: 0;
 }
