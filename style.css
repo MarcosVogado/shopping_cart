@@ -140,3 +140,33 @@ body.showCart .container {
 .listCart::-webkit-scrollbar {
     width: 0;
 }
+@media screen and (max-width: 900px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cartTab {
+        width: 100%;
+        inset: 0 -100% 0 auto;
+    }
+    body.showCart .cartTab {
+        inset: 0 0 0 auto;
+    }
+    body.showCart .container {
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 600px) {
+    .listProduct {
+        grid-template-columns: 1fr;
+    }
+    .cartTab {
+        width: 100%;
+        inset: 0 -100% 0 auto;
+    }
+    body.showCart .cartTab {
+        inset: 0 0 0 auto;
+    }
+    body.showCart .container {
+        transform: translateX(-50%);
+    }
+}
