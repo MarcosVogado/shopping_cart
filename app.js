@@ -102,17 +102,18 @@ listCartHTML.addEventListener('click', (event) => {
     let positionClick = event.target
     if(positionClick.classList.contains('minus') || positionClick.classList.contains('plus')){
         let product_id = positionClick.parentElement.parentElement.dataset.id
-        console.log(product_id)
+        let type = '' // Adicione esta linha
         if(positionClick.classList.contains('plus')){
             type = 'plus'
+        } else if(positionClick.classList.contains('minus')) {
+            type = 'minus'
         }
         changeQuantity(product_id, type)
-
     }
 })
 
 const changeQuantity = (product_id, type) => {
-    let positionItemInCart = carts.findIndex((value) = value.product_id == product_id)
+    let positionItemInCart = carts.findIndex((value) => value.product_id == product_id)
     if(positionItemInCart >= 0) {
         switch (type) {
             case 'plus':
