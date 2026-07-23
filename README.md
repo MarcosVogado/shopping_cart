@@ -1,7 +1,7 @@
 # 🛒 Shopping Cart
 
 Bem-vindo ao **Shopping Cart**!  
-Um projeto de carrinho de compras moderno, responsivo e totalmente funcional, desenvolvido com **HTML**, **CSS** e **JavaScript**.
+-> Um projeto de carrinho de compras moderno, responsivo e totalmente funcional, desenvolvido com **HTML**, **CSS** e **JavaScript**.
 
 ![Shopping Cart Banner](image/Screenshot_1.png)
 
